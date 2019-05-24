@@ -16,16 +16,18 @@ class LoginForm extends React.Component {
         console.log('go')
 
 
-        axios.post('http://localhost:9000/api/auth/login', {
-            email: 'test@test.educ',
-            password: 'test1',
+        axios.post('http://localhost:9000/api/auth/login', JSON.stringify({
+            'email': 'test@test.educ',
+            'password': 'test11'
+        }))
+        .then(function (response) {
+            console.log('response', response);
+            console.log('response.data', response.data);
+            console.log('response.data.user', response.data.user);
         })
-            .then(function (response) {
-                console.log('response', response);
-            })
-            .catch(function (error) {
-                console.log(error);
-            });
+        .catch(function (error) {
+            console.log(error);
+        });
     }
 
     render () {
