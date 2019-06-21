@@ -2,7 +2,7 @@
   "name": "billie-jean",
   "version": "0.1.0",
   "private": true,
-  "proxy": "http://localhost:9000/",
+  "proxy": "http://localhost:3000/",
   "dependencies": {
     "@babel/core": "7.4.3",
     "@svgr/webpack": "4.1.0",
