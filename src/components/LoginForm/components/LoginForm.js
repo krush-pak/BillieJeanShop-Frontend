@@ -27,9 +27,11 @@ class LoginForm extends React.Component {
     }
 
     fetchUser = (e) => {
+        e.preventDefault();
+        e.stopPropagation();
         const url = 'http://localhost:9000/api/auth/user';
 
-        axios.get(url)
+        axios.get(url, { withCredentials: true })
         .then((response) => {
             console.log('response.data.message', response.data.message);
         })
